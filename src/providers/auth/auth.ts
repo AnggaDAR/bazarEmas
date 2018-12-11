@@ -37,7 +37,7 @@ export class AuthProvider {
         };
         resolve(true);
       } else{
-        resolve(false);
+        reject(false);
       }
     });
   }

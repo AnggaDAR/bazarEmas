@@ -6,17 +6,21 @@
 -->
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>  
+    <ion-navbar>
+      <ion-title>Menus</ion-title>
+    </ion-navbar>  
   </ion-header>
 
   <ion-content>
     <ion-list>
       <button ion-item detail-none block menuClose *ngFor="let p of pages" (click)="openPage(p.page)">
-        <!-- <ion-icon item-start [name]="p.icon"></ion-icon> -->
+        <ion-icon item-start [name]="p.icon"></ion-icon>
         {{ p.title }}
       </button>
+      <!-- <button ion-item detail-none block menuClose (click)="AdminPage">
+        <ion-icon item-start [name]="home"></ion-icon>
+        Admin Dashboard
+      </button> -->
     </ion-list>
   </ion-content>
     

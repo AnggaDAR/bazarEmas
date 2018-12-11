@@ -19,6 +19,12 @@ export class LoginPage {
   loginUser(){
     this.authProvider.login(this.user.name, this.user.pw).then(success => {
       if(success){
+        let alert1 = this.alertCtrl.create({
+          title: 'Login Failed',
+          message: 'Please check your credentials',
+          buttons: ['Ok']
+        });
+        alert1.present();
         this.navCtrl.setRoot('MenuPage');
       } else {
         let alert = this.alertCtrl.create({
@@ -26,7 +32,7 @@ export class LoginPage {
           message: 'Please check your credentials',
           buttons: ['Ok']
         });
-        alert.present;
+        alert.present();
       }
     });
   }
